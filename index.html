@@ -5,6 +5,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <style>
     .mySlides {display:none;}
 </style>
@@ -117,8 +121,11 @@
     <form action="/action_page.php" target="_blank">
       <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
       <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
-      <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
+      <input class="w3-input w3-border" type="text" placeholder="House" required name="HouseName" readonly>
       <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
+      <form id="form1" runat="server">
+      <input placeholder="Choose a date" type='text' id='datepicker' />
+     </form>
       <button class="w3-button w3-black w3-section" type="submit">
         <i class="fa fa-paper-plane"></i> SEND MESSAGE
       </button>
@@ -134,5 +141,31 @@
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
 <script src="index.js"></script>
+<script type="text/javascript">
+  var availableDates = ["2-1-2023","3-1-2023","4-1-2023"];
+  
+  $(function()
+  {
+      $('#datepicker').datepicker({ beforeShowDay:
+        function(dt)
+        { 
+          return [available(dt), "" ];
+        }
+     , changeMonth: true, changeYear: false});
+  });
+  
+  
+  
+  function available(date) {
+    dmy = date.getDate() + "-" + (date.getMonth()+1) + "-" + date.getFullYear();
+    if ($.inArray(dmy, availableDates) != -1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  
+  
+      </script>
 </body>
 </html>
