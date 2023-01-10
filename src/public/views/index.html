@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Reliable Ventures</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <style>
+    .mySlides {
+      display: none;
+    }
+
+    a.w3-button:hover {
+      background-color: #0000 !important;
+      text-decoration: none !important;
+      color: white !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-wide w3-padding w3-card" style="padding: 0 !important;">
+      <a href="#home" class="w3-bar-item w3-button" style="text-align: initial;padding: 1%;">
+        <div class="w3-container w3-cell" style="width: 13%;padding: 0;">
+          <!-- LOGO -->
+          <img src='https://drive.google.com/uc?export=view&id=1jIcdGZnvqoS3jHN05bqb4VHeDYYyfzhZ'>
+        </div>
+        <div class="w3-container w3-cell" style="letter-spacing: normal;font-family: cursive;line-height: 115%;">
+          <b style="font-size: large;"> Reliable Ventures</b> <br />
+          <span style="font-size: small;"> turning houses to homes</span>
+        </div>
+      </a>
+      <!-- Float links to the right. Hide them on small screens -->
+      <div class="w3-right w3-hide-small" style="padding-top: 0.5%;">
+        <a href="#listings" class="w3-bar-item w3-button"
+          style="font-size: large; letter-spacing: normal;font-family: cursive;">View Homes</a>
+        <a href="#contact" class="w3-bar-item w3-button"
+          style="font-size: large; letter-spacing: normal;font-family: cursive;">Contact</a>
+      </div>
+    </div>
+  </div>
+  <!-- Header -->
+  <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+    <img class="w3-image" src="https://drive.google.com/uc?export=view&id=1zXzJRR7H80LhjsGDzse2s5jJRfoE3uxb"
+      alt="Architecture" width="1500" height="800">
+    <div class="w3-display-middle w3-margin-top w3-center">
+      <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min w3-display-middle"><b>Some
+            quote/welcome message here</b></span></h1>
+    </div>
+  </header>
+
+  <!-- Available Listings Section -->
+  <div class="w3-container w3-padding-32 w3-display-container" id="listings">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-center">Available Listings</h3>
+  </div>
+
+  <!-- Cards -->
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-card-4" style="width:100%">
+          <div class="w3-container w3-center">
+            <h3> 4037, 37th Ave N Robbinsdale</h3>
+            <img class="mySlides" src="https://drive.google.com/uc?export=view&id=1BrjpyZfhxkmLxF6dFzuJ2udO7RRJsV7F"
+              style="width:100%">
+            <img class="mySlides" src="https://drive.google.com/uc?export=view&id=1UQHCOShfN71on4V5xoZSzVta4lrmjzJa"
+              style="width:100%">
+            <h5> 3 Bed, 2 Bath, 2 Car Garage</h5>
+            <h6> 1,600 sqft </h6>
+            <div class="w3-section">
+              <button onclick="goToContactsSection(event)" class="w3-button w3-green">Schedule a visit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Card 2</div>
+        <img src="" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">card 3</div>
+        <img src="" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">card 4</div>
+        <img src="" alt="House" style="width:100%">
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">card 5</div>
+        <img src="" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">card 6</div>
+        <img src="" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">card 7</div>
+        <img src="" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">card 8</div>
+        <img src="" alt="House" style="width:99%">
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="contact">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
+    <p>Lets get in touch and talk about your next project.</p>
+    <form action="/action_page.php" target="_blank">
+      <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
+      <input id="interested" class="w3-input w3-border w3-light-grey" type="text" placeholder="Interested in Home"
+        required name="HomeName" readonly>
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
+      <form id="form1" runat="server">
+        <input placeholder="Choose a date" type='text' id='datepicker' />
+      </form>
+      <button class="w3-button w3-black w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </form>
+  </div>
+
+  <!-- End page content -->
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-16">
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+        class="w3-hover-text-green">w3.css</a></p>
+  </footer>
+
+  <!-- Boostrap DatePicker Script -->
+  <script type="text/javascript">
+    var availableDates = ["2-1-2023", "3-1-2023", "4-1-2023"];
+    $(function () {
+      $('#datepicker').datepicker({
+        beforeShowDay:
+          function (dt) {
+            return [available(dt), ""];
+          }
+        , changeMonth: true, changeYear: false
+      });
+    });
+    function available(date) {
+      dmy = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
+      if ($.inArray(dmy, availableDates) != -1) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  </script>
+
+  <!-- Automatic Carousel in Cards script -->
+  <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) { myIndex = 1 }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+
+  </script>
+
+  <script>
+    function goToContactsSection(event) {
+      let target = event.target;
+      if (target) {
+        let targetCard = target.closest('.w3-card-4');
+        if (targetCard) {
+          let targetHeading = targetCard.querySelector('h3');
+          if (targetHeading) {
+            let interestedField = document.querySelector('#interested');
+            if (interestedField) {
+              interestedField.value = 'Interested in Home : ' + targetHeading.innerText;
+              interestedField.scrollIntoView();
+            }
+          }
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
