@@ -217,6 +217,8 @@
         }
       }
     }
+    var fetchedStartDate, fetchedEndDate, GoogleCalendarObject;
+    fetch("http://localhost:5500/data").then(res => res.json()).then(data => {GoogleCalendarObject = data;console.log(GoogleCalendarObject);});
   </script>
 </body>
 

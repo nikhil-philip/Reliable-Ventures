@@ -15,11 +15,13 @@ app.post('/', (req, res) => {
     res.send("Hello from post req.")
 })
 
-app.listen(3000, () => {
-    console.log("server on port 3000")
+var server = app.listen(5500, () => {
+    var host = server.address().address
+    var port = server.address().port
+    console.log("Server listening on %s%s", host, port);
 })
 
-const {google} = require('googleapis');
+const { google } = require('googleapis');
 require('dotenv').config();
 
 // Provide the required configuration
@@ -28,7 +30,7 @@ const calendarId = process.env.CALENDAR_ID;
 
 // Google calendar API settings
 const SCOPES = 'https://www.googleapis.com/auth/calendar';
-const calendar = google.calendar({version : "v3"});
+const calendar = google.calendar({ version: "v3" });
 
 const auth = new google.auth.JWT(
     CREDENTIALS.client_email,
@@ -69,7 +71,7 @@ const dateTimeForCalander = () => {
 
     let startDate = event;
     // Delay in end time is 1
-    let endDate = new Date(new Date(startDate).setHours(startDate.getHours()+1));
+    let endDate = new Date(new Date(startDate).setHours(startDate.getHours() + 1));
 
     return {
         'start': startDate,
@@ -86,7 +88,7 @@ const dateTimeForCalander = () => {
 //             calendarId: calendarId,
 //             resource: event
 //         });
-    
+
 //         if (response['status'] == 200 && response['statusText'] === 'OK') {
 //             return 1;
 //         } else {
@@ -133,8 +135,11 @@ const getEvents = async (dateTimeStart, dateTimeEnd) => {
             timeMax: dateTimeEnd,
             timeZone: 'Asia/Kolkata'
         });
-    
+
         let items = response['data']['items'];
+        app.get('/data', (req, res) => {
+            res.json(items);
+        });
         return items;
     } catch (error) {
         console.log(`Error at getEvents --> ${error}`);
